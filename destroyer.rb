@@ -7,7 +7,7 @@ module Enumerable
   end
 end
 
-class MarkovChain
+class MarkovText
   TOKENS = ["\n", "\t", ' ', "'", '"']
 
   # Decompose text into an array of tokens, including and delimited by TOKENS
@@ -18,19 +18,22 @@ class MarkovChain
   # i.e. lex(str).join == str
   #
   def self.lex(str, tokens = TOKENS)
-    ary = []
+    final_ary = []
     word = ''
     str.each_byte { |b|
+      # either a token (thereby ending the current word)
+      # or part of the current word
+      #
       if tokens.include?(b.chr)
-        ary << word if !word.empty?
-        ary << b.chr
+        final_ary << word if !word.empty?
+        final_ary << b.chr
         word = ''
       else
         word << b.chr
       end
     }
-    ary << word if !word.empty?
-    ary
+    final_ary << word if !word.empty?
+    final_ary
   end
 
 
@@ -159,7 +162,7 @@ INTARWEB
     end
   end
   print "generating markov structure for #{num_prefixes} prefix words ..."
-  m = MarkovChain.new(num_prefixes)
+  m = MarkovText.new(num_prefixes)
   m.analyze(text)
   puts "DONE"
   puts "#{m.markov.keys.length} keys"

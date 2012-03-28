@@ -63,9 +63,8 @@ class MarkovText
     char_per_word = 20
     token_frequency = 0.5
     min_length = 60
-    length = char_per_word * (num_prefix_words * (1 - token_frequency)).ceil
-    fragment = text[0, [length, min_length].max]
-    lex(fragment)[0, num_prefix_words]
+    length = [char_per_word * (num_prefix_words * (1 - token_frequency)).ceil, min_length].max
+    lex(text[0, length])[0, num_prefix_words]
   end
 
   attr_reader :markov

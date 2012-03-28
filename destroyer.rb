@@ -1,12 +1,3 @@
-require 'pp'
-
-module Enumerable
-  def rand
-    a = self.to_a
-    a[super(a.size)]
-  end
-end
-
 class MarkovText
   TOKENS = ["\n", "\t", ' ', "'", '"']
 
@@ -89,7 +80,7 @@ class MarkovText
   end
 
   def generate_one(prefix_words)
-    @markov[prefix_words].rand
+    @markov[prefix_words].sample
   end
 
   def generate_all(start_prefix_words)

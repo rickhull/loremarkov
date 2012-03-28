@@ -57,6 +57,8 @@ class MarkovText
     markov
   end
 
+  # given the entire text, use a heuristic to grab only the first chunk to pass to lex
+  #
   def self.start_prefix(text, num_prefix_words)
     char_per_word = 20
     token_frequency = 0.5

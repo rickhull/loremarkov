@@ -95,7 +95,7 @@ class MarkovText
 
   def destroy(text)
     analyze(text)
-    generate_all(self.class.start_prefix(text[0, 999], @num_prefix_words))
+    generate_all(self.class.start_prefix(text, @num_prefix_words))
   end
 end
 

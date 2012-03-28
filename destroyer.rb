@@ -81,10 +81,14 @@ class MarkovText
     @markov.merge!(self.class.analyze(text, @num_prefix_words))
   end
 
+  # given a prefix, give me the next word
+  #
   def generate_one(prefix_words)
     @markov[prefix_words].sample
   end
 
+  # given the start prefix, generate words until EOF
+  #
   def generate_all(start_prefix_words)
     words = start_prefix_words
     while tmp = generate_one(words[-1 * @num_prefix_words, @num_prefix_words])
@@ -93,6 +97,8 @@ class MarkovText
     words.join
   end
 
+  # do it, you know you want to
+  #
   def destroy(text)
     analyze(text)
     generate_all(self.class.start_prefix(text, @num_prefix_words))

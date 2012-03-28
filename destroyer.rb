@@ -11,7 +11,7 @@ class MarkovText
   def self.lex(str, tokens = TOKENS)
     final_ary = []
     word = ''
-    str.each_byte { |b|
+    str.each_byte { |b|   # yes I am terrible with encodings
       # either a token (thereby ending the current word)
       # or part of the current word
       #

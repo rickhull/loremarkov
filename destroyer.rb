@@ -159,8 +159,12 @@ INTARWEB
       puts e
     end
   end
+    
   print "generating markov structure for #{num_prefixes} prefix words ..."
   m = MarkovText.new(num_prefixes)
+  
+  # we could just call #destroy now, but it's good to demo the individual steps instead
+  #
   m.analyze(text)
   puts "DONE"
   puts "#{m.markov.keys.length} keys"

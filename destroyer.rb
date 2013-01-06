@@ -152,13 +152,8 @@ INTARWEB
   if filename
     print "reading #{filename} ..."
     num_prefixes = (ARGV[1] || num_prefixes).to_i
-    begin
-      text = File.readlines(filename).join
-      puts "DONE"
-    rescue Exception => e
-      puts "ERROR"
-      puts e
-    end
+    text = File.readlines(filename).join
+    puts "DONE"
   end
     
   print "generating markov structure for #{num_prefixes} prefix words ..."

@@ -1,5 +1,7 @@
 require 'markov-text-destroyer'
 
+$stdout.sync = true
+
 text = <<EPIGENETICS
 Anyone who studied a little genetics in high school has heard of adenine, thymine, guanine and cytosine -- the A,T,G and C that make up the DNA code. But those are not the whole story. The rise of epigenetics in the past decade has drawn attention to a fifth nucleotide, 5-methylcytosine (5-mC), that sometimes replaces cytosine in the famous DNA double helix to regulate which genes are expressed. And now there's a sixth. In experiments to be published online Thursday by Science, researchers reveal an additional character in the mammalian DNA code, opening an entirely new front in epigenetic research.
 

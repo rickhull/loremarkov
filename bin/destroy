@@ -1,9 +1,19 @@
+#!/usr/bin/env ruby
+
+def usage msg=nil
+  puts "ERROR: #{msg}" if msg
+  puts <<EOF
+USAGE:
+  destroy filename
+EOF
+  exit 1
+end
+
 require 'markov-text-destroyer'
 
 $stdout.sync = true
 
 filename = ARGV.first or usage "provide an input file"
-print "reading #{filename} ..."
 num_prefixes = ARGV[1] ? ARGV[1].to_i : 5
 text = File.read(filename)
 

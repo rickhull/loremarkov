@@ -27,7 +27,7 @@ end
 # destruction parameter engage (default 5)
 #
 num_prefixes = ARGV.shift
-num_prefixes = num_prefixes ? 5 : num_prefixes.to_i
+num_prefixes = num_prefixes ? num_prefixes.to_i : 5
 
 # DESTROY!!!!!
 #

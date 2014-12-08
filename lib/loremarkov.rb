@@ -84,7 +84,7 @@ class Loremarkov
   # given a prefix, give me the next word
   #
   def generate_one(prefix_words)
-    @markov[prefix_words].sample
+    @markov.fetch(prefix_words).sample
   end
 
   # given the start prefix, generate words until EOF

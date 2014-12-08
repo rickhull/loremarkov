@@ -2,16 +2,11 @@
 
 def usage msg=nil
   puts "ERROR: #{msg}" if msg
-  puts <<EOF
-USAGE:
-  destroy filename
-EOF
+  puts "USAGE:\n  destroy filename"
   exit 1
 end
 
 require 'loremarkov'
-
-$stdout.sync = true
 
 filename = ARGV.first or usage "provide an input file"
 num_prefixes = ARGV[1] ? ARGV[1].to_i : 5

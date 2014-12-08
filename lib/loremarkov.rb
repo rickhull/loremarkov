@@ -1,4 +1,4 @@
-class MarkovTextDestroyer
+class Loremarkov
   TOKENS = ["\n", "\t", ' ', "'", '"']
 
   # Decompose text into an array of tokens, including and delimited by TOKENS

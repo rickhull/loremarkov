@@ -11,9 +11,9 @@ Gem::Specification.new do |s|
     'Rakefile',
     'README.md',
     'lib/loremarkov.rb',
-    'bin/loremarkov',
+    'bin/destroy',
   ]
-  s.executables = ['loremarkov']
+  s.executables = ['destroy']
   s.add_development_dependency "buildar", "~> 2"
   s.add_development_dependency "minitest", "~> 5"
   s.required_ruby_version = "~> 2"

@@ -1,4 +1,4 @@
-require 'markov-text-destroyer'
+require 'loremarkov'
 
 $stdout.sync = true
 
@@ -26,7 +26,7 @@ Providing further evidence for their case that 5-hydroxymethylcytosine is a seri
 Kriaucionis is now mapping the sites where 5-hydroxymethylcytosine is present in the genome, and the researchers plan to genetically modify mice to under- or overexpress the newfound nucleotide in specific cell types in order to study its effects. "This is a major discovery in the field, and it is certain to be tied to neural function in a way that we can decipher," Heintz says.
 EPIGENETICS
 
-m = MarkovTextDestroyer.new 5
+m = Loremarkov.new 5
 
 # we could just call #destroy now, but let's step through instead
 #

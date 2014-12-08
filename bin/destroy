@@ -9,7 +9,7 @@ EOF
   exit 1
 end
 
-require 'markov-text-destroyer'
+require 'loremarkov'
 
 $stdout.sync = true
 
@@ -17,4 +17,4 @@ filename = ARGV.first or usage "provide an input file"
 num_prefixes = ARGV[1] ? ARGV[1].to_i : 5
 text = File.read(filename)
 
-puts MarkovTextDestroyer.new(num_prefixes).destroy text
+puts Loremarkov.new(num_prefixes).destroy text

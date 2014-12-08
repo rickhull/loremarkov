@@ -12,6 +12,9 @@ Gem::Specification.new do |s|
     'README.md',
     'lib/loremarkov.rb',
     'bin/destroy',
+    'text/lorem_ipsum',
+    'text/epigenetics',
+    'text/oslo_accords',
   ]
   s.executables = ['destroy']
   s.add_development_dependency "buildar", "~> 2"

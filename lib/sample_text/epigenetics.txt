@@ -1,8 +1,3 @@
-require 'loremarkov'
-
-$stdout.sync = true
-
-text = <<EPIGENETICS
 Anyone who studied a little genetics in high school has heard of adenine, thymine, guanine and cytosine -- the A,T,G and C that make up the DNA code. But those are not the whole story. The rise of epigenetics in the past decade has drawn attention to a fifth nucleotide, 5-methylcytosine (5-mC), that sometimes replaces cytosine in the famous DNA double helix to regulate which genes are expressed. And now there's a sixth. In experiments to be published online Thursday by Science, researchers reveal an additional character in the mammalian DNA code, opening an entirely new front in epigenetic research.
 
 The work, conducted in Nathaniel Heintz's Laboratory of Molecular Biology at The Rockefeller University, suggests that a new layer of complexity exists between our basic genetic blueprints and the creatures that grow out of them. "This is another mechanism for regulation of gene expression and nuclear structure that no one has had any insight into," says Heintz, who is also a Howard Hughes Medical Institute investigator. "The results are discrete and crystalline and clear; there is no uncertainty. I think this finding will electrify the field of epigenetics."
@@ -24,19 +19,3 @@ What this nucleotide does is not yet clear. Initial tests suggested that it may 
 Providing further evidence for their case that 5-hydroxymethylcytosine is a serious epigenetic player, a second paper to be published in Science by an independent group at Harvard reveals the discovery of genes that produce enzymes that specifically convert 5-methylcytosine into 5-hydroxymethylcytosine. These enzymes may work in a way analogous to DNA methyltransferase, suggesting a dynamic system for regulating gene expression through 5-hydroxymethylcytosine. Kriaucionis and Heintz did not know of the other group's work, led by Anjana Rao, until earlier this month. "You look at our result, and the beautiful studies of the enzymology by Dr. Rao's group, and realize that you are at the tip of an iceberg of interesting biology and experimentation," says Heintz, a neuroscientist whose research has not focused on epigenetics in the past. "This finding of an enzyme that can convert 5-methylcytosine to 5-hydroxymethylcytosine establishes this new epigenetic mark as a central player in the field."
 
 Kriaucionis is now mapping the sites where 5-hydroxymethylcytosine is present in the genome, and the researchers plan to genetically modify mice to under- or overexpress the newfound nucleotide in specific cell types in order to study its effects. "This is a major discovery in the field, and it is certain to be tied to neural function in a way that we can decipher," Heintz says.
-EPIGENETICS
-
-num_prefixes = 5
-
-m = Loremarkov.new num_prefixes
-
-# we could just call #destroy now, but let's step through instead
-#
-print "generating markov structure for #{num_prefixes} prefix words ..."
-m.analyze text
-puts "DONE"
-
-
-puts "#{m.markov.keys.length} keys"
-puts "generating new text ..."
-puts m.generate_all(m.class.start_prefix(text[0, 999], num_prefixes))

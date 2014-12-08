@@ -8,8 +8,13 @@ end
 
 require 'loremarkov'
 
+
 filename = ARGV.first or usage "provide an input file"
-num_prefixes = ARGV[1] ? ARGV[1].to_i : 5
+unless File.exists?(filename)
+  filename = File.join(__dir__, '..', 'lib', 'sample_text', filename)
+end
+raise("unknown file: #{filename}:") unless File.exists?(filename)
 text = File.read(filename)
+num_prefixes = ARGV[1] ? ARGV[1].to_i : 5
 
 puts Loremarkov.new(num_prefixes).destroy text

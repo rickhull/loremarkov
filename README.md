@@ -8,7 +8,7 @@ passages, ready for copy / pasting, at the push of a button.  Just install the
 gem and run `destroy` for the default *lorem ipsum* paragraph.
 
 Try `destroy epigenetics` or `destroy oslo_accords` for additional fun.  Or
- provide your own corpus `destroy ~/my_first_corpus.txt`
+ provide your own: `destroy ~/my_first_corpus.txt`
 
 Inspiration
 ===

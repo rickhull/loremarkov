@@ -8,18 +8,26 @@ end
 
 require 'loremarkov'
 
-# determine exact file
+# accept text from STDIN or filename
 #
-filename = ARGV.first || 'lorem_ipsum'
-unless File.exists?(filename)
-  filename = File.join(__dir__, '..', 'text', filename)
+if $stdin.tty?
+  # from file or sample
+  filename = ARGV.shift || 'lorem_ipsum'
+  unless File.exists?(filename)
+    filename = File.join(__dir__, '..', 'text', filename)
+  end
+  raise("unknown file: #{filename}:") unless File.exists?(filename)
+  text = File.read(filename)
+else
+  # from STDIN
+  text = $stdin.read
 end
-raise("unknown file: #{filename}:") unless File.exists?(filename)
 
-# grab text
+
+# destruction parameter engage (default 5)
 #
-text = File.read(filename)
-num_prefixes = ARGV[1] ? ARGV[1].to_i : 5
+num_prefixes = ARGV.shift
+num_prefixes = num_prefixes ? 5 : num_prefixes.to_i
 
 # DESTROY!!!!!
 #

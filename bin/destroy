@@ -1,34 +1,18 @@
 #!/usr/bin/env ruby
 
-def usage msg=nil
-  puts "ERROR: #{msg}" if msg
-  puts "USAGE:\n  destroy filename"
-  exit 1
-end
-
 require 'loremarkov'
 
 # accept text from STDIN or filename
 #
-if $stdin.tty?
-  # from file or sample
-  filename = ARGV.shift || 'lorem_ipsum'
-  unless File.exists?(filename)
-    filename = File.join(__dir__, '..', 'text', filename)
-  end
-  raise("unknown file: #{filename}:") unless File.exists?(filename)
-  text = File.read(filename)
-else
-  # from STDIN
-  text = $stdin.read
-end
+text = if $stdin.tty?
+         filename = ARGV.shift || 'lorem_ipsum'
+         unless File.exists?(filename)
+           filename = File.join(__dir__, '..', 'text', filename)
+         end
+         File.read(filename)
+       else
+         $stdin.read
+       end
 
-
-# destruction parameter engage (default 5)
-#
 num_prefixes = ARGV.shift
-num_prefixes = num_prefixes ? num_prefixes.to_i : 5
-
-# DESTROY!!!!!
-#
-puts Loremarkov.new(num_prefixes).destroy text
+puts Loremarkov.new(num_prefixes ? num_prefixes.to_i : 5).destroy text

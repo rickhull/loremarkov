@@ -61,11 +61,7 @@ class Loremarkov
   # to grab only the first chunk to pass to lex
   #
   def self.start_prefix(text, num_prefix_words)
-    char_per_word = 20
-    token_frequency = 0.5
-    min_length = 60
-    length = [char_per_word * (num_prefix_words * (1 - token_frequency)).ceil, min_length].max
-    lex(text[0, length])[0, num_prefix_words]
+    lex(text[0, 999 * num_prefix_words])[0, num_prefix_words]
   end
 
   attr_reader :markov

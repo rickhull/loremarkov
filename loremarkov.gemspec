@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
   s.name        = 'loremarkov'
-  s.summary     = "Conway's Game of Life"
-  s.description = "Deathmatch"
+  s.summary     = "Lorem ipsum and more: create your own filler text"
+  s.description = "Text goes in, markov gibberish comes out"
   s.authors     = ["Rick Hull"]
   s.homepage    = 'https://github.com/rickhull/loremarkov'
   s.license     = 'GPL'

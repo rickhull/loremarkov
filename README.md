@@ -19,8 +19,11 @@ Usage
 bin/destroy
 ---
 * Accepts input via filename or STDIN
-* Also recognizes sample texts: lorem_ipsum, epigenetics, oslo_accords
-* Secondary parameter for num_prefix_words
+* Also recognizes sample texts:
+  - lorem_ipsum
+  - epigenetics
+  - oslo_accords
+* Provide a secondary parameter to control num_prefix_words
 
 Examples
 ---

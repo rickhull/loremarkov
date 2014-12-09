@@ -138,9 +138,9 @@ or it is part of the current word</p>
 <li>Arrays of string for keys and values</li>
 <li>Keys are prefixes -- ordered word sequence of constant length</li>
 <li>Values are an accumulation of the next word after the prefix, however
-many times it may occur.
-e.g. If a prefix occurs twice, then the value will be an array of two words
--- possibly the same word twice.</li>
+many times it may occur.</li>
+<li>e.g. If a prefix occurs twice, then the value will be an array of two
+words -- possibly the same word twice.</li>
 </ul>
       </td>
       <td class=code>
@@ -215,7 +215,10 @@ the first chunk to pass to lex</p>
           <a class="pilcrow" href="#section-11">&#182;</a>
         </div>
         <p>Generate Markov structure from text.
-Text should have a definite end, not just a convenient buffer split</p>
+Text should have a definite end, not just a convenient buffer split.
+This method may be called several times, but note that several EOFs
+will be present in the markov structure, any one of which will trigger
+a conclusion by #generate_all.</p>
       </td>
       <td class=code>
         <div class='highlight'><pre>  <span class="k">def</span> <span class="nf">analyze</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>

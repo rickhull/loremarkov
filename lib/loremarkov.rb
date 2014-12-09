@@ -102,7 +102,10 @@ class Loremarkov
   end
 
   # Generate Markov structure from text.
-  # Text should have a definite end, not just a convenient buffer split
+  # Text should have a definite end, not just a convenient buffer split.
+  # This method may be called several times, but note that several EOFs
+  # will be present in the markov structure, any one of which will trigger
+  # a conclusion by #generate_all.
   def analyze(text)
     @markov.merge!(self.class.analyze(text, @num_prefix_words))
   end

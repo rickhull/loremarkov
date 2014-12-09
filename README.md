@@ -33,7 +33,7 @@ Examples
     $ destroy epigenetics
     $ destroy oslo_accords 3
     $ destroy ~/my_first_corpus.txt
-    $ man ls | destroy 6
+    $ man ls | destroy 12
 
 Inspiration
 ===

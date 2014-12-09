@@ -3,9 +3,10 @@ require 'buildar'
 Buildar.new do |b|
   b.gemspec_file = 'loremarkov.gemspec'
   b.version_file = 'VERSION'
+  b.use_git = true
 end
 
-# task default: %w[test bench]
+task default: %w[test rocco] # bench]
 
 require 'rake/testtask'
 desc "Run tests"

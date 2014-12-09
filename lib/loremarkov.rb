@@ -98,6 +98,9 @@ class Loremarkov
     File.read File.join(__dir__, '..', 'text', name)
   end
 
+  # Useful for testing at the very least
+  attr_reader :markov
+
   # More prefix_words means tighter alignment to original text
   def initialize(num_prefix_words)
     @num_prefix_words = num_prefix_words

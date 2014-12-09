@@ -1,15 +1,17 @@
 Introduction
 ===
 
-Need to generate text in a hurry?  This is the tool for you!
-
-With several sample texts built in, you can generate plausible sounding
-passages, ready for copy / pasting, at the push of a button.  Just install the
-gem and run `destroy` for the default *lorem ipsum* paragraph.
+Need to generate text in a hurry?  This is the tool for you! With several sample texts built in, you can generate plausible sounding passages at the push of
+a button.
 
 Install
 ---
-    gem install loremarkov
+    $ gem install loremarkov
+
+Lorem ipsum
+---
+
+    $ destroy
 
 Usage
 ===

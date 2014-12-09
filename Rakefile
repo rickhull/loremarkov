@@ -21,3 +21,10 @@ Rake::TestTask.new do |t|
   t.pattern = "test/bench_*.rb"
   # t.warning = true
 end
+
+desc "Run rocco - generate literate programming html"
+task :rocco do
+  Dir.chdir File.join(__dir__, 'lib') do
+    `rocco *.rb -o ../rocco/`
+  end
+end

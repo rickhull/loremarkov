@@ -93,7 +93,10 @@ class Loremarkov
     lex(text[0, 999 * num_prefix_words])[0, num_prefix_words]
   end
 
-  attr_reader :markov
+  # Given `lorem_ipsum`, return the string from reading `text/lorem_ipsum`
+  def self.sample_text(name)
+    File.read File.join(__dir__, '..', 'text', name)
+  end
 
   # More prefix_words means tighter alignment to original text
   def initialize(num_prefix_words)

@@ -22,6 +22,8 @@ Destroy (executable)
 * Also recognizes sample texts: lorem_ipsum, epigenetics, oslo_accords
 * Secondary parameter for num_prefix_words
 
+Examples
+---
     $ destroy # or destroy lorem_ipsum
     $ destroy epigenetics
     $ destroy oslo_accords 3

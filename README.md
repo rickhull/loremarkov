@@ -1,3 +1,8 @@
+[![Gem Version](https://badge.fury.io/rb/loremarkov.svg)](http://badge.fury.io/rb/loremarkov)
+[![Code Climate](https://codeclimate.com/github/rickhull/loremarkov/badges/gpa.svg)](https://codeclimate.com/github/rickhull/loremarkov)
+[![Dependency Status](https://gemnasium.com/rickhull/loremarkov.svg)](https://gemnasium.com/rickhull/loremarkov)
+[![Security Status](https://hakiri.io/github/rickhull/loremarkov/master.svg)](https://hakiri.io/github/rickhull/loremarkov/master)
+
 Introduction
 ===
 

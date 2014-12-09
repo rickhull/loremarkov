@@ -19,6 +19,7 @@ Gem::Specification.new do |s|
   s.executables = ['destroy']
   s.add_development_dependency "buildar", "~> 2"
   s.add_development_dependency "minitest", "~> 5"
+  s.add_development_dependency "rocco", "~> 0"
   s.required_ruby_version = "~> 2"
 
   s.version     = File.read(File.join(__dir__, 'VERSION')).chomp

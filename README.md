@@ -7,16 +7,16 @@ With several sample texts built in, you can generate plausible sounding
 passages, ready for copy / pasting, at the push of a button.  Just install the
 gem and run `destroy` for the default *lorem ipsum* paragraph.
 
-Usage
-===
-* As a library
-* Via `destroy` executable
-
 Install
 ---
     gem install loremarkov
 
-Destroy (executable)
+Usage
+===
+* As a library (see [bin/destroy](https://github.com/rickhull/loremarkov/blob/master/bin/destroy) for an example)
+* Via `destroy` executable
+
+bin/destroy
 ---
 * Accepts input via filename or STDIN
 * Also recognizes sample texts: lorem_ipsum, epigenetics, oslo_accords

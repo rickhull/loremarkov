@@ -7,9 +7,15 @@ With several sample texts built in, you can generate plausible sounding
 passages, ready for copy / pasting, at the push of a button.  Just install the
 gem and run `destroy` for the default *lorem ipsum* paragraph.
 
-Try `destroy epigenetics` or `destroy oslo_accords` for additional fun.  Or
- provide your own: `destroy ~/my_first_corpus.txt`
+Examples
+---
+
+    $ destroy # or destroy lorem_ipsum
+    $ destroy epigenetics
+    $ destroy oslo_accordso
+    $ destroy ~/my_first_corpus.txt
+    $ man ls | destroy 6
 
 Inspiration
 ===
-* Based off of Kernighan & Pike's *The Practice of Programming* Chapter 3
+* Based upon Kernighan & Pike's *The Practice of Programming* Chapter 3

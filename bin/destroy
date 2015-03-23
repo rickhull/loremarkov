@@ -14,5 +14,4 @@ text = if $stdin.tty?
          $stdin.read
        end
 
-num_prefixes = ARGV.shift
-puts Loremarkov.new(num_prefixes ? num_prefixes.to_i : 5).destroy text
+puts Loremarkov.new((ARGV.shift || 5).to_i).destroy text

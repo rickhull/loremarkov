@@ -3,5 +3,5 @@ rvm:
   - 2.1.2
   - 2.0.0
   - ruby-head
-install: yes # don't use blunder
+install: gem install minitest
 script: rake test

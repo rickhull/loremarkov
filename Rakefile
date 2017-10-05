@@ -1,9 +1,13 @@
-require 'buildar'
+begin
+  require 'buildar'
 
-Buildar.new do |b|
-  b.gemspec_file = 'loremarkov.gemspec'
-  b.version_file = 'VERSION'
-  b.use_git = true
+  Buildar.new do |b|
+    b.gemspec_file = 'loremarkov.gemspec'
+    b.version_file = 'VERSION'
+    b.use_git = true
+  end
+rescue LoadError
+  # Buildar not installed; ok
 end
 
 task default: %w[test rocco] # bench]

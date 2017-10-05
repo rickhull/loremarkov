@@ -3,4 +3,5 @@ rvm:
   - 2.1.2
   - 2.0.0
   - ruby-head
-script: bundler exec rake test
+install: yes # don't use blunder
+script: rake test

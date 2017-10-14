@@ -19,7 +19,7 @@ Lorem ipsum
 
     $ destroy
 
-The output will [resemble this](https://github.com/rickhull/loremarkov/blob/master/text/lorem_ipsum)
+The output will resemble [this](https://github.com/rickhull/loremarkov/blob/master/text/lorem_ipsum).
 
 Usage
 ===

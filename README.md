@@ -21,8 +21,8 @@ Lorem ipsum
 
 Usage
 ===
-* [As a library](https://rickhull.github.io/loremarkov/rocco/loremarkov.html)
-* Via `destroy` executable
+* [As a library](https://rickhull.github.io/loremarkov/docs/lib/loremarkov.html)
+* Via `destroy` [executable](https://github.com/rickhull/loremarkov/blob/master/bin/destroy)
 
 bin/destroy
 ---

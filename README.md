@@ -19,6 +19,8 @@ Lorem ipsum
 
     $ destroy
 
+The output will [resemble this](https://github.com/rickhull/loremarkov/blob/master/text/lorem_ipsum)
+
 Usage
 ===
 * [As a library](https://rickhull.github.io/loremarkov/docs/lib/loremarkov.html)

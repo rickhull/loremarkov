@@ -13,7 +13,7 @@ task default: :test
 
 begin
   require 'rocco/tasks'
-  Rocco.make 'rocco/'
+  Rocco.make 'docs/'
 rescue LoadError
   warn "rocco/tasks unavailable"
 end

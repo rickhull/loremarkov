@@ -4,7 +4,7 @@ require 'loremarkov'
 NUM_PREFIX = 3
 LOREM_IPSUM = Loremarkov.sample_text 'lorem_ipsum'
 LOREM_LEX = Loremarkov.lex LOREM_IPSUM
-LOREM_SENTENCE = LOREM_IPSUM[/[^.]*\./]
+LOREM_SENTENCE = LOREM_IPSUM[/[^.]*\./] # everything until the first period
 LOREM_SENTENCE_WORDS = %w{
   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
   tempor incididunt ut labore et dolore magna aliqua.
@@ -13,6 +13,7 @@ LOREM_SENTENCE_WORDS = %w{
 describe Loremarkov do
   describe "Lorem ipsum" do
     describe "sample text" do
+      # sanity check
       it "must match test data" do
         # this works because the first Lorem tokens are all spaces
         LOREM_SENTENCE.must_equal LOREM_SENTENCE_WORDS.join(' ')

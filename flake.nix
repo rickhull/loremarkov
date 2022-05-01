@@ -32,6 +32,7 @@
       buildInputs = [
         (pkgs.ruby.withPackages (p: with p; [
 	  rake
+	  minitest
 	]))
 
         pleaseKeepMyInputs

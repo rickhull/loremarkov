@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/rickhull/loremarkov.svg?branch=master)](https://travis-ci.org/rickhull/loremarkov)
+[![CI Status](https://github.com/rickhull/loremarkov/actions/workflows/ci.yaml/badge.svg)](https://github.com/rickhull/loremarkov/actions/workflows/ci.yaml)
 [![Gem Version](https://badge.fury.io/rb/loremarkov.svg)](http://badge.fury.io/rb/loremarkov)
 [![Code Climate](https://codeclimate.com/github/rickhull/loremarkov/badges/gpa.svg)](https://codeclimate.com/github/rickhull/loremarkov)
 

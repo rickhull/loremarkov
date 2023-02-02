@@ -4,24 +4,16 @@ Gem::Specification.new do |s|
   s.description = "Text goes in, markov gibberish comes out"
   s.authors     = ["Rick Hull"]
   s.homepage    = 'https://github.com/rickhull/loremarkov'
-  s.license     = 'GPL'
-  s.files       = [
-    'loremarkov.gemspec',
-    'VERSION',
-    'Rakefile',
-    'README.md',
-    'lib/loremarkov.rb',
-    'bin/destroy',
-    'text/lorem_ipsum',
-    'text/epigenetics',
-    'text/oslo_accords',
-    'test/test_loremarkov.rb',
-  ]
-  s.executables = ['destroy']
-  s.add_development_dependency "buildar", "~> 2"
-  s.add_development_dependency "minitest", "~> 5"
-  s.add_development_dependency "rocco", "~> 0"
-  s.required_ruby_version = "~> 2"
+  s.license     = 'LGPL-3.0'
+
+  s.required_ruby_version = "> 2"
 
   s.version     = File.read(File.join(__dir__, 'VERSION')).chomp
+
+  s.files  = %w[loremarkov.gemspec VERSION Rakefile README.md]
+  s.files += Dir['lib/**/*.rb']
+  s.files += Dir['text/**/*.rb']
+  s.files += Dir['test/**/*']
+  s.files += Dir['bin/**/*.rb']
+  s.executables = ['destroy']
 end
